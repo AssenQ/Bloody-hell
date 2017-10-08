@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<input type="file" id='file'>
+<button type="button" onclick="read()">上传</button>
+<img id='show'>
+<script type="text/javascript">
+function read(){
+var r= new FileReader();
+f=document.getElementById('file').files[0];
+r.readAsDataURL(f);
+r.onload=function  (e) {
+document.getElementById('show').src=this.result;
+};
+}
+</script>
+</body>
+</html>

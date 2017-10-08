@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>time</title>
+		<script language="JavaScript">
+			function startTime()   
+			{   
+				var today=new Date();
+				var yyyy = today.getFullYear(); 
+				var MM = today.getMonth()+1;   
+				var dd = today.getDate();
+				var hh=today.getHours();// 
+				var mm=today.getMinutes();//  
+				var ss=today.getSeconds();//  
+				   
+				
+				
+				document.getElementById('nowDateTimeSpan').innerHTML=yyyy+"-"+MM +"-"+ dd +" " + hh+":"+mm+":"+ss;   
+				setTimeout('startTime()',1000);
+			}   
+			
+			function checkTime(i)   
+			{   
+				if (i<10){
+					i="0" + i;
+				}   
+				  return i;
+			}  
+		</script>
+	</head>
+	<body onload="startTime()">
+<font color="#33FFFF"><span id="nowDateTimeSpan"></span></font>	
+	</body>
+</html>
